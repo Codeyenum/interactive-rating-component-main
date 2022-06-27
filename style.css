@@ -1,0 +1,195 @@
+:root {
+   /* Primary colors */
+   --Orange: hsl(25, 97%, 53%);
+
+   /* Neutral colors */
+   --White: hsl(0, 0%, 100%);
+   --LightGrey: hsl(217, 12%, 63%);
+   --MediumGrey: hsl(216, 12%, 54%);
+   --DarkBlue: hsl(213, 19%, 18%);
+   --VeryDarkBlue: hsl(216, 12%, 8%);
+}
+
+@import url('https://fonts.googleapis.com/css2?family=Overpass:wght@400;700&display=swap');
+
+* {
+   margin: 0;
+   padding: 0;
+   box-sizing: border-box;
+   font-family: 'Overpass', sans-serif;
+}
+
+html {
+   font-size: 15px;
+}
+
+body {
+   background-color: var(--VeryDarkBlue);   
+   color: var(--MediumGrey);
+}
+
+.rating_state, .thanks_state {
+   background-color: var(--DarkBlue);
+   border-radius: 15px;   
+   width: 20rem;
+   padding: 20px;
+
+   display: flex;
+   flex-direction: column;
+   justify-content: space-evenly;
+
+   position: absolute;   
+   left: 50%;
+   top: 50%;
+   transform: translate(-50%, -50%) scale(1);
+}
+
+.star-icon_background {
+   display: flex;
+   justify-content: center;
+   align-items: center;  
+
+   background-color: rgba(57, 67, 80, 1);
+   border-radius: 50%; 
+   height: 2.5rem;
+   margin: .5rem 0;
+   width: 2.5rem;      
+}
+
+.star-icon {
+   width: .8rem;
+}
+
+.rating_state h1, .thanks_state h1 {
+   color: var(--White);   
+   font-size: 1.5rem;
+   font-weight: 700;
+   margin: 1rem 0;
+}
+
+.rating_state p, .thanks_state p {
+   font-size: .85rem;
+   font-weight: 400;
+   line-height: 1.35rem;
+   margin-bottom: .5rem;
+}
+
+form {
+   color: var(--LightGrey);
+   display: flex;   
+   flex-wrap: wrap;
+   justify-content: space-between;
+}
+
+form div {
+   position: relative;
+}
+
+input {   
+   appearance: none;   
+   height: 0;
+   width: 0;   
+   position: absolute;   
+   left: 50%;
+   top: 50%;
+   transform: translate(-50%, -50%);
+   z-index: 2;
+}
+
+input:focus {
+   outline: none;   
+}
+
+input:hover~label {
+   background-color: var(--MediumGrey);
+   color: var(--White);
+   cursor: pointer;
+}
+
+input:checked~label {
+   background-color: var(--Orange);
+   color: var(--White);
+}
+
+label {
+   position: relative;
+   display: flex;
+   justify-content: center;
+   align-items: center;   
+   
+   background-color: rgba(57, 67, 80, 1);
+   border-radius: 50%;
+   font-size: .8rem;   
+   height: 2.4rem;
+   margin: 1.35rem 0;  
+   width: 2.4rem; 
+   z-index: 1;
+}
+
+label:hover {
+   background-color: var(--MediumGrey);
+   color: var(--White);
+   cursor: pointer;
+}
+
+
+button {
+   background-color: var(--Orange);
+   color: var(--White);   
+   border-radius: 20px;
+   border: none;
+   height: 2.65rem;
+   width: 100%;
+}
+
+button:hover {
+   background-color: var(--White);
+   color: var(--Orange);
+   cursor: pointer;
+}
+
+.thanks_state {
+   text-align: center;
+   align-items: center;
+}
+
+.thanks_state img {
+   width: 8rem;
+   margin: 1rem;
+}
+
+.rating_dialogue {   
+   background-color: rgba(57, 67, 80, 1);
+   border-radius: 16px;
+   color: var(--Orange);
+   font-size: .85rem;
+   margin: .5rem;
+   padding: .6rem;
+}
+
+.hide {
+   transform: translate(-50%, -50%) scale(0);
+}
+
+.show {
+   transition: 1.75s ease-in-out;
+}
+
+@media screen and (max-width: 320px){
+   .rating_state, .thanks_state {
+      width: 17.5rem;
+   }
+}
+
+
+@media screen and (min-width: 620px) {
+   label {
+      width: 3rem;
+      height: 3rem;
+   }
+
+   .rating_state h1, .thanks_state h1 {  
+      font-size: 1.75rem;
+   }
+   
+}
