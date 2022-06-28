@@ -28,7 +28,7 @@ Users should be able to:
 
 ### Links
 
-- Solution URL: [Codeyenum Intro Sign Up Form Component]https://www.frontendmentor.io/solutions/interactiveratingcomponentmain-6Nz1gB2jCt)
+- Solution URL: [Codeyenum Intro Sign Up Form Component](https://www.frontendmentor.io/solutions/interactiveratingcomponentmain-6Nz1gB2jCt)
 - Live Site URL: [Intro Component with Sign Up Form](https://codeyenum.github.io/interactive-rating-component-main/)
 
 ## My process
